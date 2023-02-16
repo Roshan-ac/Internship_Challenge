@@ -384,7 +384,7 @@ header {
 
                 }
 
-             
+
 
             }
 
@@ -456,23 +456,27 @@ header {
     position: relative;
 
     .shadow {
-        position: absolute;
-        z-index: -1;
-        left: 0;
-        top: 20rem;
+        
 
         img {
-            width: 25rem;
+            // object-fit: contain;
+            position: absolute;
+            top: 12rem;
+            z-index: 1;
+            left: 0;
+            width: 30rem;
             height: 25rem;
         }
 
-        @include media-md{
-         top: 13rem;
+        @include media-md {
+            top: 13rem;
+            left: 0;
 
-         img {
-            width: 60rem;
-            height: 40rem;
-        }
+            img {
+                // object-fit: cover;
+                width: 60rem;
+                height: 40rem;
+            }
         }
     }
 
@@ -502,15 +506,15 @@ header {
 
             h2 {
                 text-align: center;
-                margin-top: 20px;
+                margin-top: 30px;
                 font-size: 16px;
                 line-height: 24px;
             }
 
 
 
-            @include media-md{
-                width: 90vh;
+            @include media-md {
+                width: 60vw;
             }
 
         }
@@ -552,13 +556,15 @@ header {
                     align-items: start;
 
 
+                    &_image {
+                        margin-top: 20px;
+                        margin-left: 20px;
 
-
-                    img {
-                        margin: 20px;
-                        padding: 5px 10px 5px 10px;
-                        height: 50px;
-                        width: 40px;
+                        img {
+                            object-fit: contain;
+                            height: 60px;
+                            width: 60px;
+                        }
                     }
 
                     div {

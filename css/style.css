@@ -293,20 +293,20 @@ header {
 
 .service_section {
   position: relative; }
-  .service_section .shadow {
+  .service_section .shadow img {
     position: absolute;
-    z-index: -1;
+    top: 12rem;
+    z-index: 1;
     left: 0;
-    top: 20rem; }
-    .service_section .shadow img {
-      width: 25rem;
-      height: 25rem; }
-    @media screen and (min-width: 768px) {
-      .service_section .shadow {
-        top: 13rem; }
-        .service_section .shadow img {
-          width: 60rem;
-          height: 40rem; } }
+    width: 30rem;
+    height: 25rem; }
+  @media screen and (min-width: 768px) {
+    .service_section .shadow {
+      top: 13rem;
+      left: 0; }
+      .service_section .shadow img {
+        width: 60rem;
+        height: 40rem; } }
   .service_section_item {
     margin-top: 2rem;
     padding: 10px 16px 10px 10px;
@@ -330,12 +330,12 @@ header {
         width: 3.5rem; }
       .service_section_item_heading h2 {
         text-align: center;
-        margin-top: 20px;
+        margin-top: 30px;
         font-size: 16px;
         line-height: 24px; }
       @media screen and (min-width: 768px) {
         .service_section_item_heading {
-          width: 90vh; } }
+          width: 60vw; } }
     .service_section_item_container {
       margin-top: 50px;
       margin-bottom: 50px;
@@ -358,11 +358,13 @@ header {
           flex-flow: column wrap;
           padding: 10px 14px;
           align-items: start; }
-          .service_section_item_container .card_content img {
-            margin: 20px;
-            padding: 5px 10px 5px 10px;
-            height: 50px;
-            width: 40px; }
+          .service_section_item_container .card_content_image {
+            margin-top: 20px;
+            margin-left: 20px; }
+            .service_section_item_container .card_content_image img {
+              object-fit: contain;
+              height: 60px;
+              width: 60px; }
           .service_section_item_container .card_content div {
             padding: 5px 10px 5px 10px; }
             .service_section_item_container .card_content div h2 {

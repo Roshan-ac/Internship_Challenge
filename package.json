@@ -1,0 +1,25 @@
+{
+  "name": "yipl-frontend-challenge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "css": "node-sass --include-path scss ./scss/style.scss ./css/style.css",
+    "watch": "nodemon -e scss -x npm run css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Roshan-ac/Internship_Challenge.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Roshan-ac/Internship_Challenge/issues"
+  },
+  "homepage": "https://github.com/Roshan-ac/Internship_Challenge#readme",
+  "devDependencies": {
+    "node-sass": "^8.0.0",
+    "nodemon": "^2.0.20"
+  }
+}

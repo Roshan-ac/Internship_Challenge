@@ -27,11 +27,10 @@ function toogleButton() {
 
 
 
-
  
 var swiper = new Swiper(".service_section_item_container_slide", {
     slidesPerView: 3,
-    spaceBetween: 50,
+    spaceBetween: 30,
     loop: true,
     centerSlide: 'true',
     fade: 'true',

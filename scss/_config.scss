@@ -1,7 +1,7 @@
 $primaryColor: #458FF6;
 $secondaryColor: #b14175;
 
-$primaryFont: 'Mulish', sans-serif;
+$primaryFont: 'Mulish';
 
 
 
@@ -16,6 +16,7 @@ body {
     width: 100vw;
     font-family: $primaryFont;
     overflow-x: hidden;
+    user-select: none;
 }
 
 

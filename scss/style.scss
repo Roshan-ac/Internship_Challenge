@@ -92,6 +92,7 @@ header {
         width: 100vw;
         visibility: hidden;
 
+
         &.open {
             visibility: visible
         }
@@ -100,7 +101,7 @@ header {
         &_logo {
             @include flex-container;
             justify-content: space-between;
-            width: 9.5rem;
+            width: 160px;
             margin-bottom: 50px;
 
             h1 {
@@ -110,8 +111,8 @@ header {
             &_circle {
                 @include flex-container;
                 background-color: $primaryColor;
-                height: 40px;
-                width: 40px;
+                width: 41px;
+                height: 41px;
                 padding: 2;
                 text-align: center;
                 border-radius: 2rem;
@@ -127,16 +128,8 @@ header {
 
             @include media-md {
                 margin-bottom: 0;
-                margin-right: 50px;
 
             }
-
-            @include media-lg {
-                margin-bottom: 0;
-                margin-right: 200px;
-
-            }
-
         }
 
 
@@ -159,6 +152,18 @@ header {
                 transform: translateY(0);
             }
 
+
+            .nav_menu_list {
+                @include flex-container;
+                flex-flow: column wrap;
+
+
+
+                @include media-md {
+                    flex-flow: row wrap;
+                }
+
+            }
 
             &_item {
                 margin-top: 15px;
@@ -222,9 +227,11 @@ header {
 
             //    Nav_Menu  ------> Media query in Medium devices
             @include media-md {
+                width: 84vw;
                 transform: translateY(0);
                 height: max-content;
                 flex-direction: row;
+                justify-content: space-between;
                 padding: 40px 0 25px 0;
                 background-color: rgb(255, 255, 255);
                 opacity: 100%;
@@ -246,6 +253,8 @@ header {
 
         @include media-md {
             visibility: visible;
+            @include flex-container;
+            height: 100px;
         }
     }
 
@@ -272,6 +281,17 @@ header {
 
 
 // Main section css goes here with media query
+.element {
+    position: absolute;
+    left: -20px;
+    top: 8rem;
+
+    img {
+        object-fit: contain;
+        height: 115px;
+        width: 131px;
+    }
+}
 
 .main {
     overflow-x: hidden;
@@ -284,7 +304,7 @@ header {
 
     &_section {
         position: absolute;
-        top: 5rem;
+        top: 8rem;
         width: 100vw;
         @include flex-container;
         flex-flow: column wrap;
@@ -317,7 +337,7 @@ header {
 
                 @include media-md {
                     width: 28rem;
-                    margin-top: 5rem;
+                    margin-top: 104px;
                     text-align: start;
 
                     h1 {
@@ -334,20 +354,23 @@ header {
                 }
 
                 @include media-lg {
-                    width: 28rem;
-                    margin-top: 5rem;
+                    width: 446px;
+                    margin-top: 104px;
                     text-align: start;
 
                     h1 {
-                        font-size: 28px;
-                        line-height: 40px;
-                        width: 17rem;
+                        font-weight: 700;
+                        font-size: 48px;
+                        line-height: 56px;
+                        width: 426px;
                     }
 
                     h2 {
-                        font-size: 18px;
-                        line-height: 27px;
-                        width: 26rem;
+                        font-weight: 500;
+                        font-size: 21px;
+                        line-height: 32px;
+                        color: #7D7987;
+                        width: 466px;
                     }
                 }
 
@@ -378,8 +401,8 @@ header {
                     margin-top: 0;
 
                     img {
-                        height: 30rem;
-                        width: 30rem;
+                        width: 693px;
+                        height: 598px;
                     }
 
                 }
@@ -400,14 +423,37 @@ header {
                     text-align: center;
                     font-size: 14px;
                     letter-spacing: 1px;
-                    font-weight: 600;
+                    font-weight: 500;
                     cursor: pointer;
                     border: none;
                 }
 
 
                 @include media-md {
-                    top: 25rem;
+                    top: 13rem;
+                }
+
+                @include media-lg {
+                    @include flex-container;
+                    flex-direction: row;
+                    text-align: center;
+
+
+
+                    button {
+                        width: 200px;
+                        height: 60px;
+
+                        border-radius: 55px;
+                        font-weight: 500;
+                        font-size: 18px;
+                        background: #458FF6;
+
+                        &:hover {
+                            @include transition-ease;
+                            background-color: #3772C2;
+                        }
+                    }
                 }
             }
 
@@ -426,7 +472,7 @@ header {
             @include media-lg {
                 flex-flow: row;
                 align-items: start;
-                width: 70vw;
+                width: 80vw;
                 justify-content: space-between;
 
             }
@@ -452,20 +498,19 @@ header {
 
 
 .service_section {
-
+    margin-top: 150px;
     position: relative;
 
     .shadow {
-        
 
         img {
-            // object-fit: contain;
+
+            left: -150px;
+            top: 14rem;
             position: absolute;
-            top: 12rem;
-            z-index: 1;
-            left: 0;
-            width: 30rem;
-            height: 25rem;
+            z-index: -1;
+            width: 937px;
+            height: 671px;
         }
 
         @include media-md {
@@ -481,7 +526,7 @@ header {
     }
 
     &_item {
-        margin-top: 2rem;
+
         padding: 10px 16px 10px 10px;
         @include flex-container;
         flex-flow: column wrap;
@@ -494,19 +539,20 @@ header {
             padding: 0 6px 0 6px;
 
             h1 {
-                font-size: 25px;
-                line-height: 50px;
+                font-weight: 700;
+                font-size: 36px;
+                line-height: 56px;
             }
 
             hr {
-                height: 3px;
+                height: 1px;
                 background-color: black;
-                width: 3.5rem;
+                width: 3.6rem;
             }
 
             h2 {
                 text-align: center;
-                margin-top: 30px;
+                margin-top: 35px;
                 font-size: 16px;
                 line-height: 24px;
             }
@@ -514,7 +560,35 @@ header {
 
 
             @include media-md {
-                width: 60vw;
+                width: 64vw;
+
+
+                h1 {
+                    font-weight: 700;
+                    font-size: 36px;
+                    line-height: 100px;
+                }
+
+
+
+                h2 {
+                    font-weight: 300;
+                    font-size: 18px;
+                    line-height: 30px;
+
+                    /* or 167% */
+                    text-align: center;
+
+                    color: #7D7987;
+
+                    mix-blend-mode: normal;
+                }
+
+
+
+
+
+
             }
 
         }
@@ -539,49 +613,64 @@ header {
             }
 
             .card {
-                border-radius: 10px;
-                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-                height: 45vh;
-                background-color: #fff;
-
-
-
-
+                @include transition-ease;
 
 
                 &_content {
+                    box-shadow: 10px 40px 50px rgba(229, 233, 246, 0.4);
                     @include flex-container;
+                    justify-content: start;
                     flex-flow: column wrap;
-                    padding: 10px 14px;
+                    padding-left: 10px;
                     align-items: start;
+                    width: 350px;
+                    height: 354px;
+                    background: #FFFFFF;
+
+                    /* drop shadow */
+
+                    border-radius: 20px;
 
 
                     &_image {
-                        margin-top: 20px;
                         margin-left: 20px;
 
                         img {
                             object-fit: contain;
-                            height: 60px;
-                            width: 60px;
+                            height: 90px;
+                            width: 90px;
                         }
                     }
 
                     div {
-                        padding: 5px 10px 5px 10px;
+                        margin-left: 20px;
+                        margin-top: 40px;
+                        width: 280px;
 
                         h2 {
-                            font-size: 18px;
-                            line-height: 50px;
+                            font-size: 24px;
+                            line-height: 56px;
                         }
 
                         h3 {
-                            font-size: 15px;
-                            line-height: 22px;
+                            font-weight: 300;
+                            font-size: 16px;
+                            line-height: 28px;
+
+                            /* or 175% */
+
+                            color: #7D7987;
                         }
 
                     }
                 }
+
+                @include media-md {
+                    margin-left: 40px;
+                    margin-right: 40px;
+                }
+
+
             }
 
 

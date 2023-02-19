@@ -30,7 +30,7 @@ function toogleButton() {
  
 var swiper = new Swiper(".service_section_item_container_slide", {
     slidesPerView: 3,
-    spaceBetween: 30,
+    spaceBetween: 20,
     loop: true,
     centerSlide: 'true',
     fade: 'true',
@@ -50,10 +50,10 @@ var swiper = new Swiper(".service_section_item_container_slide", {
             slidesPerView: 1,
         },
         520: {
-            slidesPerView: 2,
+            slidesPerView: 3,
         },
         950: {
-            slidesPerView: 3,
+            slidesPerView: 4,
         },
     },
   });

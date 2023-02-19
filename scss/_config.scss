@@ -17,6 +17,7 @@ body {
     font-family: $primaryFont;
     overflow-x: hidden;
     user-select: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 

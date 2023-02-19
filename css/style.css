@@ -9,7 +9,9 @@ body {
   font-family: "Mulish";
   overflow-x: hidden;
   user-select: none;
-  -webkit-tap-highlight-color: transparent; }
+-webkit-tap-highlight-color: transparent;
+ }
+
 
 a,
 li {

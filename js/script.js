@@ -50,11 +50,14 @@ var swiper = new Swiper(".service_section_item_container_slide", {
             slidesPerView: 1,
         },
         520: {
-            slidesPerView: 3,
+            slidesPerView: 2,
         },
         950: {
-            slidesPerView: 4,
+            slidesPerView: 3,
         },
+        1240:{
+            slidesPerView:3
+        }
     },
   });
 

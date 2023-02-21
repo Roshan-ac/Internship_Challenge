@@ -1,5 +1,5 @@
 @import 'config';
-@import 'responsive';
+
 
 @function text-clr($color) {
     @if (lightness($color) > 50) {
@@ -276,8 +276,34 @@ header {
 
 
 
+// custom button with media query
 
+.primary_button {
+    @include custom-button;
+}
 
+.secondary_button {
+    @include custom-button;
+
+    button {
+        background-color: transparent;
+        color: #458FF6;
+        font-weight: 400;
+        border: 2px solid #458FF6;
+
+        &:hover {
+            background-color: transparent;
+            border-color: #3772C2;
+        }
+
+        span {
+            margin-left: 10px;
+            position: absolute;
+            bottom: 19px;
+            width: 20px;
+        }
+    }
+}
 
 
 
@@ -399,6 +425,7 @@ header {
                 margin-top: 50px;
 
                 img {
+                    object-fit: contain;
                     height: 20rem;
                     width: 20rem;
                 }
@@ -427,106 +454,6 @@ header {
 
             }
 
-            &_button {
-                position: absolute;
-                bottom: 0;
-                border-radius: 40px;
-
-                
-              
-                button {
-                     position: relative;
-                    padding: 12px 30px 12px 30px;
-                    background-color: $primaryColor;
-                    color: white;
-                    border-radius: 20px;
-                    text-align: center;
-                    font-size: 14px;
-                    letter-spacing: 1px;
-                    font-weight: 500;
-                    cursor: pointer;
-                    border: none;
-
-                    
-                    &:hover {
-                        @include transition-ease;
-                        background-color: #3772C2;
-                    }
-
-                    &::after {
-                        content: "";
-                        display: block;
-                        position: absolute;
-                        border-radius: 4em;
-                        left: 0;
-                        top:0;
-                        width: 100%;
-                        height: 100%;
-                        opacity: 0;
-                        @include transition-ease;
-                        box-shadow: 0 0 10px 40px #3772C2;
-                      }
-                      
-                      &:active:after {
-                        box-shadow: 0 0 0 0 white;
-                        position: absolute;
-                        border-radius: 4em;
-                        left: 0;
-                        top:0;
-                        opacity: 1;
-                        transition: 0s;
-                        
-                      }
-                      
-                      &:active {
-                        top: 0;
-                      
-                       
-                      }
-                }
-
-                @include media-md {
-                    top: 13rem;
-                    @include flex-container;
-                    flex-direction: row;
-                    text-align: center;
-
-
-
-                    button {
-                        width: 190px;
-                        height: 50px;
-                        padding: 12px 20px 12px 20px;
-                        border-radius: 55px;
-                        font-weight: 500;
-                        font-size: 16px;
-                        background: #458FF6;
-
-                        
-                    }
-                }
-
-                @include media-lg {
-                    top: 13rem;
-                    @include flex-container;
-                    flex-direction: row;
-                    text-align: center;
-
-
-
-                    button {
-                        width: 200px;
-                        height: 60px;
-
-                        border-radius: 55px;
-                        font-weight: 500;
-                        font-size: 18px;
-                        background: #458FF6;
-
-                        
-                    }
-                }
-            }
 
 
 
@@ -576,20 +503,18 @@ header {
 
         img {
 
-            left: -150px;
+            left: -100px;
             top: 14rem;
             position: absolute;
             z-index: -1;
-            width: 937px;
-            height: 671px;
+            width: 580px;
+            height: 380px;
         }
 
         @include media-md {
-            top: 13rem;
-            left: 0;
 
             img {
-                // object-fit: cover;
+                left: -150px;
                 width: 60rem;
                 height: 40rem;
             }
@@ -603,7 +528,7 @@ header {
 
 
         &_heading {
-          
+
             @include flex-container;
             flex-flow: column wrap;
             text-align: center;
@@ -838,5 +763,515 @@ header {
 
     }
 
+
+}
+
+
+// Apps section css goes here
+
+.app_section {
+    margin-bottom: 20px;
+    margin-top: 10px;
+
+    &_container {
+        margin-top: 60px;
+        @include flex-container;
+        flex-flow: column wrap;
+
+        &_image {
+            margin-top: 50px;
+
+            img {
+                object-fit: contain;
+                height: 20rem;
+                width: 20rem;
+            }
+
+            @include media-md {
+                margin-top: 0;
+
+                img {
+                    height: 25rem;
+                    width: 25rem;
+                }
+
+            }
+
+            @include media-lg {
+                margin-top: 0;
+
+                img {
+                    width: 693px;
+                    height: 598px;
+                }
+
+            }
+
+
+
+        }
+
+        &_text {
+            @include flex-container;
+            flex-flow: column wrap;
+            padding: 0 40px 0 40px;
+            text-align: center;
+
+            h1 {
+                font-size: 20px;
+                line-height: 50px;
+            }
+
+            hr {
+                width: 50px;
+                margin-top: 10px;
+            }
+
+            h2 {
+                margin-top: 20px;
+                font-size: 16px;
+                line-height: 26px;
+                color: #7D7987;
+            }
+        }
+
+
+
+        @include media-md {
+            width: 90vw;
+            flex-flow: row;
+            justify-content: space-between;
+            margin-top: 100px;
+
+
+
+            &_image {
+
+                img {
+                    object-fit: contain;
+                    height: 25rem;
+                    width: 25rem;
+                }
+            }
+
+
+            &_text {
+                align-items: start;
+                width: 28rem;
+                text-align: start;
+
+                h1 {
+                    width: 15rem;
+                    font-size: 25px;
+                    line-height: 36px;
+                }
+
+                hr {
+                    margin-top: 15px;
+                }
+
+                h2 {
+                    font-size: 16px;
+                    line-height: 27px;
+                    width: 22rem;
+                    color: #7D7987;
+                }
+            }
+        }
+
+
+        @include media-lg {
+            width: 80vw;
+            margin-top: 200px;
+
+            &_image {
+
+                img {
+                    object-fit: contain;
+                    width: 650px;
+                    height: 477px;
+                }
+            }
+
+
+            &_text {
+                margin-left: 80px;
+                align-items: start;
+                width: 28rem;
+                text-align: start;
+
+                h1 {
+                    font-weight: 700;
+                    font-size: 36px;
+                    line-height: 56px;
+                    width: 355px;
+                }
+
+                hr {
+                    margin-top: 25px;
+                }
+
+                h2 {
+                    font-weight: 300;
+                    font-size: 18px;
+                    line-height: 30px;
+                }
+            }
+        }
+
+
+    }
+
+
+    @include media-md {
+        margin-top: 200px;
+    }
+
+}
+
+
+
+
+
+// Testimonials section goes here
+
+
+.testimonial_section {
+    margin-top: 150px;
+
+    &_container {
+        padding: 2px;
+
+        &_item {
+            background: linear-gradient(208.18deg, #67C3F3 9.05%, #5A98F2 76.74%);
+            border-radius: 24px;
+            color: white;
+            width: 95vw;
+            padding-bottom: 40px;
+
+            &_title {
+                @include flex-container;
+                flex-flow: column wrap;
+                align-items: center;
+                padding-top: 20px;
+
+                h2 {
+                    font-size: 20px;
+                    line-height: 50px;
+                }
+
+                hr {
+                    width: 50px;
+                    color: white;
+                    margin-top: 10px;
+                }
+
+
+                @include media-md {
+                    padding-top: 60px;
+
+                    h2 {
+                        font-weight: 700;
+                        font-size: 36px;
+                        line-height: 48px;
+                    }
+
+                    hr {
+                        width: 50px;
+                        color: white;
+                        margin-top: 20px;
+                    }
+                }
+            }
+
+
+            .avatar {
+                margin-top: 50px;
+                @include flex-container;
+                flex-flow: column wrap;
+                align-items: center;
+
+                &_content {
+                    @include flex-container;
+                    flex-flow: column wrap;
+                    text-align: center;
+
+                    &_image {
+
+                        img {
+                            object-fit: contain;
+                            width: 133px;
+                            height: 133px;
+                        }
+                    }
+
+                    &_name {
+                        margin-top: 15px;
+
+                        h2 {
+                            font-size: 18px;
+                            line-height: 30px;
+                        }
+
+                        h3 {
+                            font-size: 16px;
+                            line-height: 30px;
+                        }
+                    }
+
+
+
+                    @include media-md {
+                        flex-flow: row wrap;
+                        justify-content: space-around;
+                        text-align: left;
+                        width: 28rem;
+
+                        &_name {
+                            margin-top: 15px;
+                            margin-right: 50px;
+
+                            h2 {
+                                font-weight: 700;
+                                font-size: 22px;
+                                line-height: 20px;
+                            }
+
+                            h3 {
+                                font-weight: 400;
+                                font-size: 18px;
+                                line-height: 48px;
+                                color: rgba(255, 255, 255, 0.85);
+                            }
+                        }
+                    }
+
+
+                }
+
+                &_comment {
+                    margin-top: 15px;
+                    text-align: center;
+
+                    h4 {
+                        line-height: 20px;
+                        font-weight: 300;
+                        padding: 0 25px 0 25px;
+                        font-size: 14px;
+                    }
+
+
+
+
+
+                    @include media-md {
+
+                        margin-top: 15px;
+                        text-align: left;
+                        width: 417px;
+
+                        h4 {
+                            font-weight: 400;
+                            font-size: 19px;
+                            line-height: 30px;
+                            color: rgba(255, 255, 255, 0.9);
+
+
+                        }
+
+                    }
+
+                }
+
+
+                @include media-md {
+                    flex-flow: row wrap;
+                    justify-content: space-around;
+                    width: 58rem;
+                }
+
+            }
+
+
+            @include media-md {
+                width: 90vw;
+                @include flex-container;
+                flex-flow: column wrap;
+
+            }
+
+            @include media-lg {
+                width: 80vw;
+            }
+        }
+
+
+
+
+
+    }
+}
+
+
+// Article section goes here
+
+
+.article_section {
+    @include flex-container;
+    flex-flow: column wrap;
+    margin-top: 100px;
+
+    &_heading {
+        @include flex-container;
+        flex-flow: column wrap;
+
+        h1 {
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 56px;
+        }
+
+        hr {
+            margin-top: 10px;
+            width: 60px;
+        }
+
+
+        @include media-md {
+
+            h1 {
+                font-weight: 700;
+                font-size: 36px;
+                line-height: 56px;
+            }
+
+            hr {
+                margin-top: 20px;
+                width: 60px;
+            }
+        }
+    }
+
+
+    &_container {
+        margin-top: 20px;
+        @include flex-container;
+        flex-flow: column wrap;
+        align-items: center;
+
+        &_item {
+            box-shadow: 10px 40px 50px rgba(229, 233, 246, 0.4);
+            border-radius: 20px;
+            width: max-content;
+            padding-bottom: 30px;
+
+            &_image {
+                @include flex-container;
+
+                img {
+                    border-radius: 20px 20px 0 0;
+                    object-fit: contain;
+                    width: 280px;
+                    height: 280px;
+                }
+            }
+
+
+            &_text {
+                width: 260px;
+                padding-left: 30px;
+                padding-right: 30px;
+
+                h3 {
+                    font-weight: 700;
+                    font-size: 18px;
+                    line-height: 32px;
+                }
+
+                h4 {
+                    margin-top: 10px;
+                    font-weight: 300;
+                    font-size: 15px;
+                    line-height: 28px;
+                    color: #7D7987;
+                }
+
+                h5 {
+                    margin-top: 10px;
+                    font-weight: 600;
+                    font-size: 17px;
+                    line-height: 28px;
+                    color: #4089ED;
+
+                    span {
+                        font-size: 17px;
+                        margin-left: 15px;
+                    }
+                }
+            }
+
+
+            @include media-md {
+                margin-top: 0;
+
+                &_image {
+                    img {
+                        object-fit: contain;
+                        width: 369px;
+                        height: 246px;
+                    }
+                }
+
+                &_text {
+                    width: 270px;
+                    padding-left: 30px;
+                    margin-top: 30px;
+
+                    h3 {
+                        font-weight: 700;
+                        font-size: 21px;
+                        line-height: 32px;
+                    }
+
+                    h4 {
+                        font-weight: 300;
+                        font-size: 16px;
+                        line-height: 28px;
+                        color: #7D7987;
+                    }
+
+                    h5 {
+                        font-weight: 600;
+                        font-size: 17px;
+                        line-height: 28px;
+                        color: #4089ED;
+
+                        span {
+                            font-size: 17px;
+                            margin-left: 15px;
+                        }
+                    }
+                }
+            }
+
+        }
+
+
+        @include media-md {
+            @include flex-container;
+            flex-flow: row wrap;
+            align-items: center;
+            justify-content: space-between;
+            width: 90vw;
+            margin-top: 50px;
+            
+        }
+
+        @include media-lg {
+            @include flex-container;
+            justify-content: space-between;
+            width: 78vw;
+        }
+    }
 
 }

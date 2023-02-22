@@ -24,8 +24,8 @@
 
         <nav class="nav">
             <ul class="nav_menu">
-                <div class="nav_logo">
-                    <div class="nav_logo_circle">
+                <div class="logo_content">
+                    <div class="logo_content_circle">
                         <strong>T</strong>
                     </div>
                     <h1>Trafalgar</h1>
@@ -40,10 +40,10 @@
                         <a href="" class="nav_menu_item_link">Find a doctor</a>
                     </li>
                     <li class="nav_menu_item">
-                        <a href="" class="nav_menu_item_link">Apps</a>
+                        <a href="#apps" class="nav_menu_item_link">Apps</a>
                     </li>
                     <li class="nav_menu_item">
-                        <a href="" class="nav_menu_item_link">Testimonials</a>
+                        <a href="#testimonials" class="nav_menu_item_link">Testimonials</a>
                     </li>
                     <li class="nav_menu_item">
                         <a href="" class="nav_menu_item_link">About us</a>
@@ -203,7 +203,7 @@
 
             <!-- Apps Section goes here -->
 
-            <div class="app_section">
+            <div class="app_section" id="apps">
                 <div class="app_section_container">
                     <div class="app_section_container_image">
                         <img src="./assets/learn.png">
@@ -243,7 +243,8 @@
 
             <!-- Testimonials section goes here -->
 
-            <div class="testimonial_section">
+            <div class="testimonial_section" id="testimonials">
+
                 <div class="testimonial_section_container">
                     <div class="testimonial_section_container_item">
                         <div class="testimonial_section_container_item_title">
@@ -300,9 +301,10 @@
                             <img src="./assets/image 2.png" alt="">
                         </div>
                         <div class="article_section_container_item_text">
-                            <h3>Herbal medicines that are 
+                            <h3>Herbal medicines that are
                                 safe for consumption</h3>
-                            <h4>Herbal medicine is very widely used at this time because of its very good for your health...</h4>
+                            <h4>Herbal medicine is very widely used at this time because of its very good for your
+                                health...</h4>
                             <h5>Read more <span>&rarr;</span></h5>
                         </div>
                     </div>
@@ -311,7 +313,7 @@
                             <img src="./assets/image 3.png" alt="">
                         </div>
                         <div class="article_section_container_item_text">
-                            <h3>Natural care for healthy 
+                            <h3>Natural care for healthy
                                 facial skin</h3>
                             <h4>A healthy lifestyle should start from now and also for your skin health.
                                 There are some...</h4>
@@ -328,13 +330,113 @@
 
             <!-- Contact Section goes here -->
 
-            <div class="contact_section"></div>
+            <div class="contact_section">
+
+                <div class="contact_section_heading">
+                    <h2>Contact us</h2>
+                    <hr>
+                    <h3> Have any questions? We’d love to hear from you.</h3>
+                </div>
+
+                <div class="contact_section_item">
+                    <form action="">
+                        <div class="flex_container">
+                            <div class="flex_container_input_field">
+                                <label for="Name">Your Name</label>
+                                <input type="text" required>
+                            </div>
+                            <div class="flex_container_input_field">
+                                <label for="Name">Phone No.</label>
+                                <input type="text" required>
+                            </div>
+                        </div>
+                        <div class="input_field">
+                            <label for="Email">Email ID</label>
+                            <input type="text" required>
+                        </div>
+                        <div class="input_field">
+                            <label for="Name">Your message</label>
+                            <textarea name="comment" id="" cols="30" rows="10" required></textarea>
+                        </div>
+
+                        <div class="secondary_button">
+                            <button>Send Message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
 
 
 
             <!-- Footer Section goes here -->
 
-            <div class="footer_section"></div>
+            <div class="footer_section">
+
+                <div class="footer_section_content">
+                    <div class="footer_section_content_item">
+                        <div class="logo_content">
+                            <div class="logo_content_circle">
+                                <strong>T</strong>
+                            </div>
+                            <h1>Trafalgar</h1>
+                        </div>
+
+                        <div class="footer_section_content_item_description">
+                            <h3>
+                                Trafalgar provides progressive, and affordable healthcare, accessible on mobile and
+                                online
+                                for everyone
+                            </h3>
+                            <h4>©Trafalgar PTY LTD 2020. All rights reserved</h4>
+                        </div>
+                    </div>
+                    <div class="footer_section_content_item">
+                        <div class="footer_section_content_item_title">
+                            <h2>Company</h2>
+                        </div>
+                        <ul>
+                            <li><a>About</a></li>
+                            <li><a>Testimonials</a></li>
+                            <li><a>Find a doctor</a></li>
+                            <li><a>Apps</a></li>
+                        </ul>
+
+
+
+
+                    </div>
+                    <div class="footer_section_content_item">
+                        <div class="footer_section_content_item_title">
+                            <h2>Region</h2>
+                        </div>
+                        <ul>
+                            <li><a>Indonesia</a></li>
+                            <li><a>Singapore</a></li>
+                            <li><a>Hongkong</a></li>
+                            <li><a>Canada</a></li>
+                        </ul>
+
+
+
+
+                    </div>
+                    <div class="footer_section_content_item">
+                        <div class="footer_section_content_item_title">
+                            <h2>Help</h2>
+                        </div>
+                        <ul>
+                            <li><a>Help center</a></li>
+                            <li><a>Contact support</a></li>
+                            <li><a>Instructions</a></li>
+                            <li><a>How it works</a></li>
+                        </ul>
+
+
+
+
+                    </div>
+                </div>
+            </div>
         </div>
 
     </main>

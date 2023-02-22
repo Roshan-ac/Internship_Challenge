@@ -98,39 +98,7 @@ header {
         }
 
 
-        &_logo {
-            @include flex-container;
-            justify-content: space-between;
-            width: 160px;
-            margin-bottom: 50px;
 
-            h1 {
-                font-size: 24px;
-            }
-
-            &_circle {
-                @include flex-container;
-                background-color: $primaryColor;
-                width: 41px;
-                height: 41px;
-                padding: 2;
-                text-align: center;
-                border-radius: 2rem;
-                color: white;
-
-                strong {
-                    font-size: 26px;
-                }
-
-
-            }
-
-
-            @include media-md {
-                margin-bottom: 0;
-
-            }
-        }
 
 
         &_menu {
@@ -305,6 +273,39 @@ header {
     }
 }
 
+.logo_content {
+    @include flex-container;
+    justify-content: space-between;
+    width: 160px;
+    margin-bottom: 50px;
+
+    h1 {
+        font-size: 24px;
+    }
+
+    &_circle {
+        @include flex-container;
+        background-color: $primaryColor;
+        width: 41px;
+        height: 41px;
+        padding: 2;
+        text-align: center;
+        border-radius: 2rem;
+        color: white;
+
+        strong {
+            font-size: 26px;
+        }
+
+
+    }
+
+
+    @include media-md {
+        margin-bottom: 0;
+
+    }
+}
 
 
 // Main section css goes here with media query
@@ -948,6 +949,24 @@ header {
             color: white;
             width: 95vw;
             padding-bottom: 40px;
+            position: relative;
+
+
+            &::after {
+                content: url('../assets/Group.png');
+                position: absolute;
+                right: -45px;
+                color: white;
+                top: -16px;
+            }
+
+            &::before {
+                content: url('../assets/element.png');
+                position: absolute;
+                left: -60px;
+                z-index: -1;
+                bottom: 20px;
+            }
 
             &_title {
                 @include flex-container;
@@ -1212,7 +1231,7 @@ header {
 
 
             @include media-md {
-                margin-top: 0;
+                margin-top: 30px;
 
                 &_image {
                     img {
@@ -1264,7 +1283,7 @@ header {
             justify-content: space-between;
             width: 90vw;
             margin-top: 50px;
-            
+
         }
 
         @include media-lg {
@@ -1274,4 +1293,245 @@ header {
         }
     }
 
+}
+
+
+// Contact section goes here
+
+.contact_section {
+    width: 98vw;
+    @include flex-container;
+    flex-flow: column wrap;
+    margin-top: 100px;
+
+    &_heading {
+        @include flex-container;
+        flex-flow: column;
+
+        h2 {
+            font-weight: 700;
+            font-size: 36px;
+            line-height: 45px;
+        }
+
+        hr {
+            width: 40px;
+            margin-top: 20px;
+        }
+
+        h3 {
+            margin-top: 20px;
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 23px;
+            color: #000000;
+        }
+    }
+
+    &_item {
+
+        width: 80%;
+        margin-top: 50px;
+
+        form {
+            @include flex-container;
+            flex-flow: column;
+
+            .input_field,
+            .flex_container_input_field {
+                @include flex-container;
+                flex-flow: column;
+                align-items: start;
+
+                label {
+                    margin-top: 40px;
+                    padding: 4px;
+                    letter-spacing: 1.5px;
+                    font-size: 16px;
+                    font-weight: 100;
+                }
+
+                input {
+                    margin-top: 5px;
+
+                    width: 309px;
+                    padding: 10px 8px 10px 8px;
+                    border-radius: 5px;
+                    outline: none;
+                    font-size: 15px;
+                    letter-spacing: 1.5px;
+                    border: 1px solid black;
+                }
+
+                textarea {
+                    margin-top: 5px;
+                    outline: none;
+                    border: 1px solid black;
+                    border-radius: 5px;
+                    padding: 10px 10px 10px 10px;
+                    font-size: 15px;
+                    letter-spacing: 1.5px;
+                    width: 309px;
+                    height: 202px;
+                    resize: none;
+
+                }
+            }
+
+            .flex_container {
+                @include flex-container;
+                flex-flow: column wrap;
+
+            }
+        }
+
+
+
+
+
+        @include media-md {
+            width: 90%;
+
+
+            form {
+
+                .input_field {
+
+                    label {
+                        font-size: 16px;
+                    }
+
+                    input {
+                        width: 650px;
+
+                    }
+
+                    textarea {
+                        width: 650px;
+                    }
+                }
+
+                .flex_container {
+                    flex-flow: row;
+
+                    &_input_field {
+                        margin-left: 8px;
+                        margin-right: 8px;
+                    }
+                }
+            }
+        }
+
+
+    }
+}
+
+
+
+// Footer section goes here
+
+
+
+.footer_section {
+    position: relative;
+    margin-top: 100px;
+    width: 100vw;
+    height: max-content;
+    @include flex-container;
+    background: linear-gradient(183.41deg, #67C3F3 -8.57%, #5A98F2 82.96%);
+
+
+
+    &::after {
+        content: url('../assets/Group.png');
+        position: absolute;
+        left: -20px;
+        color: white;
+        bottom: -20px;
+    }
+
+    &::before {
+        content: url('../assets/element.png');
+        position: absolute;
+        top: -50px;
+        z-index: -1;
+        right: 80px;
+    }
+
+    &_content {
+        height: 50%;
+        width: 80%;
+
+        &_item {
+            margin-top: 20px;
+
+            .logo_content_circle {
+                background-color: white;
+                color: #5B9BF3;
+            }
+
+
+            h1 {
+                color: white;
+            }
+
+            h3 {
+                margin-top: 20px;
+                width: 391px;
+                font-weight: 300;
+                font-size: 18px;
+                line-height: 28px;
+                color: #FFFFFF;
+            }
+
+            h4 {
+                margin-top: 40px;
+                font-weight: 300;
+                font-size: 16px;
+                line-height: 28px;
+                color: #FFFFFF;
+
+
+            }
+
+
+            ul {
+                font-weight: 300;
+                font-size: 18px;
+                line-height: 38px;
+                color: white;
+
+                li {
+                    list-style: none;
+                    margin-top: 10px;
+                    cursor: pointer;
+
+                    a {
+                        text-decoration: none;
+                    }
+                }
+            }
+
+            &_title {
+                h2 {
+                    color: white;
+                    font-weight: 700;
+                    font-size: 20px;
+                    line-height: 60px;
+                }
+
+
+            }
+        }
+
+
+        @include media-md{
+            @include flex-container;
+            flex-flow: row wrap;
+            align-items: stretch;
+            justify-content: space-between;
+            padding-top: 80px;
+            padding-bottom: 80px;
+        }
+    }
 }

@@ -6,11 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trafalgar</title>
+    <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/swiper-bundle.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -18,8 +22,10 @@
     <!-- Header part -->
     <!--  Navbar Section code goes here-->
     <header>
-        <div class="menu-button">
-            <span class="menu-button_burgar"></span>
+        <div class="menu_button">
+            <div class="menu_button_burgar">
+                <span class="menu_button_burgar_content"></span>
+            </div>
         </div>
 
         <nav class="nav">
@@ -62,6 +68,7 @@
 
 
         <!-- element image -->
+        <!-- In this element vector icon is placed absoulutely -->
 
         <div class="element">
             <img src="./assets/element.png" alt="">
@@ -69,7 +76,15 @@
         <div class="main_section" id="home">
 
 
-            <div class="main_section_item" >
+
+
+            <div class="logo_content">
+                <div class="logo_content_circle">
+                    <strong>T</strong>
+                </div>
+                <h1>Trafalgar</h1>
+            </div>
+            <div class="main_section_item">
                 <div class="main_section_item_text">
                     <h1>Virtual healthcare for you</h1>
                     <h2>Trafalgar provides progressive, and affordable
@@ -199,6 +214,8 @@
                 </div>
             </div>
 
+            <!-- Service Section end -->
+
 
 
             <!-- Apps Section goes here -->
@@ -230,7 +247,7 @@
                             or administrative hassle) and securely</h2>
 
                         <div class="secondary_button absolute_button">
-                            <button>Download </button>
+                            <button>Download <i class="fa-sharp fa-solid fa-arrow-down"></i> </button>
                         </div>
                     </div>
                     <div class="app_section_container_image">
@@ -239,6 +256,10 @@
 
                 </div>
             </div>
+
+            <!-- App Section End -->
+
+
 
 
             <!-- Testimonials section goes here -->
@@ -251,28 +272,79 @@
                             <h2>What our customer are saying</h2>
                             <hr>
                         </div>
-                        <div class="testimonial_section_container_item_content avatar">
-                            <div class="avatar_content">
-                                <div class="avatar_content_image">
-                                    <img src="./assets/avatar.png" alt="" srcset="">
+                        <div class="testimonial_section_container_item_slide">
+                            <div class="testimonial_section_container_item_slide_content avatar">
+                                <div class="avatar_content">
+                                    <div class="avatar_content_image">
+                                        <img src="./assets/avatar.png" alt="" srcset="">
+                                    </div>
+                                    <div class="avatar_content_name">
+                                        <h2>Edward Newgate</h2>
+                                        <h3>Founder Circle</h3>
+                                    </div>
                                 </div>
-                                <div class="avatar_content_name">
-                                    <h2>Edward Newgate</h2>
-                                    <h3>Founder Circle</h3>
+                                <div class="avatar_comment">
+                                    <h4>“Our dedicated patient engagement app and
+                                        web portal allow you to access information instantaneously (no tedeous form,
+                                        long calls,
+                                        or administrative hassle) and securely”</h4>
                                 </div>
-                            </div>
-                            <div class="avatar_comment">
-                                <h4>“Our dedicated patient engagement app and
-                                    web portal allow you to access information instantaneously (no tedeous form,
-                                    long calls,
-                                    or administrative hassle) and securely”</h4>
                             </div>
                         </div>
+                        <div class="testimonial_section_container_item_slide">
+
+                            <div class="testimonial_section_container_item_slide_content avatar">
+                                <div class="avatar_content">
+                                    <div class="avatar_content_image">
+                                        <img src="https://randomuser.me/api/portraits/men/34.jpg" alt="" srcset="">
+                                    </div>
+                                    <div class="avatar_content_name">
+                                        <h2>Juan Rodriguez</h2>
+                                        <h3>Director of Marketing</h3>
+                                    </div>
+                                </div>
+                                <div class="avatar_comment">
+                                    <h4>“As someone who's always on-the-go, I love being able to access my medical
+                                        information quickly and securely with this app and web portal. It saves me so
+                                        much time and hassle!”</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial_section_container_item_slide">
+                            <div class="testimonial_section_container_item_slide_content avatar">
+                                <div class="avatar_content">
+                                    <div class="avatar_content_image">
+                                        <img src="https://randomuser.me/api/portraits/women/8.jpg" alt="" srcset="">
+                                    </div>
+                                    <div class="avatar_content_name">
+                                        <h2>Sarah Chen</h2>
+                                        <h3>Chief Operating Officer</h3>
+                                    </div>
+                                </div>
+                                <div class="avatar_comment">
+                                    <h4>“I was hesitant about using a digital platform for my medical information at
+                                        first, but this app and web portal have exceeded my expectations. It's so easy
+                                        to use and I feel confident that my data is secure”</h4>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
 
-                    <div class="crousel_nav"></div>
+                    <div class="crousel_nav">
+                        <i class="fa-sharp fa-solid fa-arrow-right" onclick="goNext()"></i>
+                        <div class="crousel_nav_dots">
+                            <div class="crousel_nav_dots_item active"></div>
+                            <div class="crousel_nav_dots_item"></div>
+                            <div class="crousel_nav_dots_item"></div>
+                        </div>
+                        <i class="fa-sharp fa-solid fa-arrow-left" onclick="goPrev()"></i>
+                    </div>
                 </div>
             </div>
+
+
+            <!-- Testimonials section End -->
 
 
 
@@ -328,6 +400,11 @@
             </div>
 
 
+            <!-- Article section end -->
+
+
+
+
             <!-- Contact Section goes here -->
 
             <div class="contact_section">
@@ -339,7 +416,9 @@
                 </div>
 
                 <div class="contact_section_item">
-                    <form action="">
+                    <form action="#">
+
+                        <!-- Flex container class has flex-box property used to wrap element horizontally. -->
                         <div class="flex_container">
                             <div class="flex_container_input_field">
                                 <label for="Name">Your Name</label>
@@ -355,7 +434,7 @@
                             <input type="text" required>
                         </div>
                         <div class="input_field">
-                            <label for="Name">Your message</label>
+                            <label for="Name">Your Message</label>
                             <textarea name="comment" id="" cols="30" rows="10" required></textarea>
                         </div>
 
@@ -365,6 +444,9 @@
                     </form>
                 </div>
             </div>
+
+            <!-- Contact Section end -->
+
 
 
 
@@ -387,12 +469,12 @@
                                 online
                                 for everyone
                             </h3>
-                            <h4>©Trafalgar PTY LTD 2020. All rights reserved</h4>
+                            <h4 class="absolute_text">©Trafalgar PTY LTD 2020. All rights reserved</h4>
                         </div>
                     </div>
+
+                    <!-- Flex container class has flex-box property used to wrap element horizontally. -->
                     <div class="flex_container">
-
-
                         <div class="footer_section_content_item">
                             <div class="footer_section_content_item_title">
                                 <h2>Company</h2>
@@ -423,24 +505,29 @@
 
 
                         </div>
-           
-                    <div class="footer_section_content_item">
-                        <div class="footer_section_content_item_title">
-                            <h2>Help</h2>
+
+                        <div class="footer_section_content_item">
+                            <div class="footer_section_content_item_title">
+                                <h2>Help</h2>
+                            </div>
+                            <ul>
+                                <li><a>Help center</a></li>
+                                <li><a>Contact support</a></li>
+                                <li><a>Instructions</a></li>
+                                <li><a>How it works</a></li>
+                            </ul>
                         </div>
-                        <ul>
-                            <li><a>Help center</a></li>
-                            <li><a>Contact support</a></li>
-                            <li><a>Instructions</a></li>
-                            <li><a>How it works</a></li>
-                        </ul>
                     </div>
                 </div>
-                </div>
             </div>
+
+
+            <!-- Footer Section End -->
         </div>
 
     </main>
+
+    <!-- Main Section End -->
 
 
 

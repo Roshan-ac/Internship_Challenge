@@ -1,6 +1,7 @@
 @import 'config';
 
 
+// Function for auto textColor selection
 @function text-clr($color) {
     @if (lightness($color) > 50) {
         @return #000;
@@ -11,69 +12,85 @@
     }
 }
 
+
+// Header css goes here
 header {
     position: fixed;
     width: 100vw;
     z-index: 3;
 
-    .menu-button {
 
-        position: absolute;
-        right: 2rem;
-        top: 2rem;
-        width: 30px;
-        height: 30px;
+    .menu_button {
+        position: relative;
         z-index: 4;
-        cursor: pointer;
-
-
 
         &_burgar {
+            cursor: pointer;
             position: absolute;
-            top: 0.5px;
-            right: 0;
-            width: 28px;
-            height: 3px;
-            background-color: rgb(0, 0, 0);
+            top: 1rem;
+            right: 10px;
+            height: 40px;
+            width: 60px;
+            border-radius: 16px 0 0 0;
+            background: #101111b7;
 
-            &::before {
-                content: '';
-                position: absolute;
-                top: -8px;
-                width: 28px;
+            &_content {
+                display: inline-block;
                 height: 3px;
-                background-color: rgb(0, 0, 0);
-            }
-
-            &::after {
-                content: '';
+                width: 30px;
+                background: rgb(255, 255, 255);
                 position: absolute;
-                top: 8px;
-                width: 24px;
-                height: 3px;
-                background-color: rgb(0, 0, 0);
-            }
+                right: 12px;
+                top: 19px;
 
-
-            &.open {
-                @include transition-ease;
-                transform: rotate(720deg);
-                background: transparent;
-
-                &::before {
-                    @include transition-ease;
-                    background-color: red;
-                    transform: rotate(45deg) translate(6px, 8px);
-                }
 
                 &::after {
+                    content: '';
+                    height: 3px;
+                    width: 30px;
+                    background: rgb(254, 252, 252);
+                    position: absolute;
+                    top: -8px;
+                }
+
+                &::before {
+                    content: '';
+                    height: 3px;
+                    width: 26px;
+                    top: 8px;
+                    background: rgb(255, 254, 254);
+                    position: absolute;
+                }
+
+
+
+                &.open {
                     @include transition-ease;
-                    width: 28px;
-                    background-color: red;
-                    transform: rotate(-45deg) translate(3px, -6px);
+                    transform: rotate(720deg);
+                    background: transparent;
+
+                    &::before {
+                        @include transition-ease;
+                        background-color: red;
+                        width: 28px;
+                        transform: rotate(45deg) translate(-7px, -7px);
+                    }
+
+                    &::after {
+                        @include transition-ease;
+                        width: 28px;
+                        background-color: red;
+                        transform: rotate(-45deg) translate(-4px, 3px);
+                    }
+
                 }
 
             }
+
+
+
+
+
 
         }
 
@@ -91,6 +108,7 @@ header {
         left: 0;
         width: 100vw;
         visibility: hidden;
+
 
 
         &.open {
@@ -206,8 +224,6 @@ header {
                 color: text-clr(rgba(255, 255, 255, 0.833));
             }
 
-            //    Nav_Menu  ------> Media query in Large devices
-            @include media-lg {}
         }
 
 
@@ -222,7 +238,7 @@ header {
         @include media-md {
             visibility: visible;
             @include flex-container;
-            height: 100px;
+            height: 110px;
             background-color: white;
         }
     }
@@ -233,7 +249,10 @@ header {
 
 }
 
+// Header css End
 
+
+// Iteration for Li elements to delay translate speed
 @for $i from 1 through 5 {
     .nav_menu_item:nth-child(#{$i}) {
         transition-delay: ($i * 0.1s) + 0.15s;
@@ -245,7 +264,6 @@ header {
 
 
 // custom button with media query
-
 .primary_button {
     @include custom-button;
 }
@@ -266,17 +284,16 @@ header {
 
         }
 
-        span {
+        i {
             margin-left: 10px;
-            position: absolute;
-            bottom: 19px;
-            width: 20px;
         }
     }
 }
 
+// Custom button css End
 
 
+// Global logo css styling with media query
 .logo_content {
     @include flex-container;
     justify-content: space-between;
@@ -310,6 +327,9 @@ header {
 
     }
 }
+
+// Global logo css end
+
 
 
 // Main section css goes here with media query
@@ -348,13 +368,16 @@ header {
 
     &_section {
         position: absolute;
-        top: 8rem;
+        top: 1rem;
         width: 100vw;
         @include flex-container;
         flex-flow: column wrap;
 
 
         &_item {
+
+
+
             position: relative;
             @include flex-container;
             justify-content: start;
@@ -362,14 +385,14 @@ header {
             height: 40rem;
             text-align: center;
 
-            .absolute_button{
+            .absolute_button {
                 position: absolute;
                 bottom: 0;
-            
-            
-            @include media-md{
-                position: relative;
-            }
+
+
+                @include media-md {
+                    position: relative;
+                }
             }
 
 
@@ -427,10 +450,11 @@ header {
 
                     h2 {
                         font-weight: 500;
-                        font-size: 21px;
+                        font-size: 19px;
                         line-height: 32px;
                         color: #7D7987;
-                        width: 466px;
+                        width: 422px;
+                        margin-top: 34px;
                     }
                 }
 
@@ -461,7 +485,7 @@ header {
                     margin-top: 0;
 
                     img {
-                        width: 693px;
+                        width: 622px;
                         height: 598px;
                     }
 
@@ -481,7 +505,12 @@ header {
                 align-items: start;
                 width: 90vw;
                 justify-content: space-between;
+                top: 2.5rem;
 
+
+                .logo_content {
+                    visibility: hidden;
+                }
             }
 
             @include media-lg {
@@ -507,11 +536,11 @@ header {
 
 }
 
+// Main section css end 
+
 
 
 // Service section css goes here 
-
-
 .service_section {
     margin-top: 150px;
     position: relative;
@@ -783,9 +812,12 @@ header {
 
 }
 
+// Service section css End
+
+
+
 
 // Apps section css goes here
-
 .app_section {
     margin-bottom: 20px;
     margin-top: 10px;
@@ -795,10 +827,16 @@ header {
         @include flex-container;
         flex-flow: column wrap;
         position: relative;
-        
-        .absolute_button{
+
+        .absolute_button {
             position: absolute;
-            bottom: -80px;
+            bottom: -90px;
+
+            @include media-md {
+                bottom: 14px;
+            }
+
+
 
         }
 
@@ -811,12 +849,13 @@ header {
                 width: 20rem;
             }
 
+
             @include media-md {
                 margin-top: 0;
 
                 img {
-                    height: 25rem;
-                    width: 25rem;
+                    width: 508px;
+                    height: 564px;
                 }
 
             }
@@ -825,7 +864,7 @@ header {
                 margin-top: 0;
 
                 img {
-                    width: 693px;
+                    width: 627px;
                     height: 598px;
                 }
 
@@ -873,8 +912,8 @@ header {
 
                 img {
                     object-fit: contain;
-                    height: 25rem;
-                    width: 25rem;
+                    width: 508px;
+                    height: 564px;
                 }
             }
 
@@ -912,8 +951,8 @@ header {
 
                 img {
                     object-fit: contain;
-                    width: 650px;
-                    height: 477px;
+                    width: 622px;
+                    height: 598px;
                 }
             }
 
@@ -953,13 +992,12 @@ header {
 
 }
 
+// app section css end
 
 
 
 
 // Testimonials section goes here
-
-
 .testimonial_section {
     margin-top: 150px;
 
@@ -967,12 +1005,16 @@ header {
         padding: 2px;
 
         &_item {
+
             background: linear-gradient(208.18deg, #67C3F3 9.05%, #5A98F2 76.74%);
             border-radius: 24px;
             color: white;
             width: 95vw;
-            padding-bottom: 40px;
+            height: 450px;
             position: relative;
+            overflow: hidden;
+
+
 
 
             &::after {
@@ -981,21 +1023,23 @@ header {
                 right: -45px;
                 color: white;
                 top: -16px;
+                opacity: 0.9;
             }
 
             &::before {
                 content: url('../assets/element.png');
                 position: absolute;
-                left: -60px;
-                z-index: -1;
+                left: -20px;
                 bottom: 20px;
+                opacity: 0.9;
             }
+
 
             &_title {
                 @include flex-container;
                 flex-flow: column wrap;
                 align-items: center;
-                padding-top: 20px;
+                padding: 20px;
 
                 h2 {
                     font-size: 20px;
@@ -1014,6 +1058,22 @@ header {
 
                     h2 {
                         font-weight: 700;
+                        font-size: 26px;
+                        line-height: 38px;
+                    }
+
+                    hr {
+                        width: 50px;
+                        color: white;
+                        margin-top: 20px;
+                    }
+                }
+
+                @include media-lg {
+                    padding-top: 60px;
+
+                    h2 {
+                        font-weight: 700;
                         font-size: 36px;
                         line-height: 48px;
                     }
@@ -1023,6 +1083,18 @@ header {
                         color: white;
                         margin-top: 20px;
                     }
+                }
+            }
+
+            &_slide {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 12%;
+                @include transition-ease;
+
+                @include media-md {
+                    top: 28%;
                 }
             }
 
@@ -1039,11 +1111,16 @@ header {
                     text-align: center;
 
                     &_image {
+                        background: #ffffff;
+                        padding: 2px;
+                        border-radius: 10rem;
 
                         img {
+                            border-radius: 10rem;
                             object-fit: contain;
                             width: 133px;
-                            height: 133px;
+                            height: 130px;
+
                         }
                     }
 
@@ -1103,9 +1180,6 @@ header {
                     }
 
 
-
-
-
                     @include media-md {
 
                         margin-top: 15px;
@@ -1114,7 +1188,25 @@ header {
 
                         h4 {
                             font-weight: 400;
-                            font-size: 19px;
+                            font-size: 15px;
+                            line-height: 30px;
+                            color: rgba(255, 255, 255, 0.9);
+
+
+                        }
+
+                    }
+
+
+                    @include media-lg {
+
+                        margin-top: 15px;
+                        text-align: left;
+                        width: 417px;
+
+                        h4 {
+                            font-weight: 400;
+                            font-size: 16px;
                             line-height: 30px;
                             color: rgba(255, 255, 255, 0.9);
 
@@ -1129,7 +1221,7 @@ header {
                 @include media-md {
                     flex-flow: row wrap;
                     justify-content: space-around;
-                    width: 58rem;
+
                 }
 
             }
@@ -1137,14 +1229,15 @@ header {
 
             @include media-md {
                 width: 90vw;
-                @include flex-container;
-                flex-flow: column wrap;
+                height: 500px;
 
             }
 
             @include media-lg {
                 width: 80vw;
+                height: 400px;
             }
+
         }
 
 
@@ -1154,16 +1247,57 @@ header {
     }
 
 
-@include media-md{
-    margin-top: 200px;
-}
+    @include media-md {
+        margin-top: 200px;
+    }
+
+
+
+    .crousel_nav {
+        @include flex-container;
+        width: 250px;
+        justify-content: space-between;
+        margin: 50px auto;
+
+        i {
+            color: #7fa1d3ba;
+            font-size: 25px;
+            cursor: pointer;
+
+            &:hover {
+                color: #5A98F2
+            }
+
+        }
+
+
+        &_dots {
+            @include flex-container;
+            width: 60px;
+            justify-content: space-between;
+
+            &_item {
+                border-radius: 20px;
+                height: 8px;
+                width: 8px;
+                background-color: rgba(94, 90, 90, 0.525);
+            }
+
+            .active {
+                background-color: rgba(65, 131, 231, 0.864);
+            }
+
+        }
+
+    }
 
 }
+
+// Testimonials section end
+
 
 
 // Article section goes here
-
-
 .article_section {
     @include flex-container;
     flex-flow: column wrap;
@@ -1205,7 +1339,6 @@ header {
         margin-top: 20px;
         @include flex-container;
         flex-flow: column wrap;
-        align-items: center;
 
         &_item {
             box-shadow: 10px 40px 50px rgba(229, 233, 246, 0.4);
@@ -1324,9 +1457,11 @@ header {
 
 }
 
+// Article section css end
+
+
 
 // Contact section goes here
-
 .contact_section {
     width: 98vw;
     @include flex-container;
@@ -1339,21 +1474,43 @@ header {
 
         h2 {
             font-weight: 700;
-            font-size: 36px;
+            font-size: 20px;
             line-height: 45px;
         }
 
         hr {
             width: 40px;
-            margin-top: 20px;
+            margin-top: 10px;
         }
 
         h3 {
             margin-top: 20px;
             font-weight: 300;
-            font-size: 18px;
+            font-size: 16px;
             line-height: 23px;
-            color: #000000;
+            color: #181818bb;
+        }
+
+
+        @include media-md {
+            h2 {
+                font-weight: 700;
+                font-size: 36px;
+                line-height: 45px;
+            }
+
+            hr {
+                width: 40px;
+                margin-top: 20px;
+            }
+
+            h3 {
+                margin-top: 20px;
+                font-weight: 300;
+                font-size: 18px;
+                line-height: 23px;
+                color: #000000;
+            }
         }
     }
 
@@ -1377,7 +1534,7 @@ header {
                     padding: 4px;
                     letter-spacing: 1.5px;
                     font-size: 16px;
-                    font-weight: 100;
+                    color: #000000a8;
                 }
 
                 input {
@@ -1455,12 +1612,12 @@ header {
     }
 }
 
+// Contact section css End
+
+
 
 
 // Footer section goes here
-
-
-
 .footer_section {
     position: relative;
     margin-top: 100px;
@@ -1480,7 +1637,7 @@ header {
         height: 80px;
         overflow: hidden;
 
-        img{
+        img {
             object-fit: contain;
             height: 100px;
             width: 100px;
@@ -1498,22 +1655,34 @@ header {
     &_content {
         height: 50%;
         width: 85%;
+        position: relative;
+        padding-top: 20px;
+        padding-bottom: 50px;
+
+        .absolute_text {
+            position: absolute;
+            bottom: 0;
+
+            @include media-lg {
+                position: relative;
+            }
+        }
 
 
-        .flex_container{
+        .flex_container {
             @include flex-container;
             flex-flow: row wrap;
             justify-content: space-between;
-            width: 80%;
+            width: 95%;
             padding: 10px;
-          
 
 
-            @include media-md{
+
+            @include media-md {
                 width: 58%;
                 padding: 5px;
             }
-        
+
         }
 
         &_item {
@@ -1553,15 +1722,22 @@ header {
                 font-weight: 300;
                 font-size: 18px;
                 line-height: 38px;
-                color: white;
+
 
                 li {
                     list-style: none;
                     margin-top: 10px;
+                    color: white;
                     cursor: pointer;
+                    opacity: 0.8;
 
                     a {
                         text-decoration: none;
+                    }
+
+
+                    &:hover {
+                        opacity: 1;
                     }
                 }
             }
@@ -1583,9 +1759,20 @@ header {
             @include flex-container;
             flex-flow: row wrap;
             align-items: stretch;
-            justify-content: space-between;
+            justify-content: center;
             padding-top: 80px;
-            padding-bottom: 80px;
+            padding-bottom: 60px;
+        }
+
+        @include media-lg {
+            justify-content: space-between;
         }
     }
 }
+
+// Footer section css End
+
+
+// Thanks for Watching
+
+// The End.............

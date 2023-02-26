@@ -62,7 +62,7 @@ header {
             transition: all 0.4s ease-in-out;
             background-color: red;
             width: 28px;
-            transform: rotate(45deg) translate(-7px, -7px); }
+            transform: rotate(45deg) translate(-8px, -7px); }
           header .menu_button_burgar_content.open::after {
             transition: all 0.4s ease-in-out;
             width: 28px;
@@ -673,22 +673,22 @@ header {
         margin-top: 100px; }
         .app_section_container_image img {
           object-fit: contain;
-          width: 508px;
-          height: 564px; }
+          width: 370px;
+          height: 524px; }
         .app_section_container_text {
           align-items: start;
           width: 28rem;
           text-align: start; }
           .app_section_container_text h1 {
-            width: 15rem;
-            font-size: 25px;
+            width: 12rem;
+            font-size: 20px;
             line-height: 36px; }
           .app_section_container_text hr {
             margin-top: 15px; }
           .app_section_container_text h2 {
             font-size: 16px;
             line-height: 27px;
-            width: 22rem;
+            width: 19rem;
             color: #7D7987; } }
     @media screen and (min-width: 1024px) {
       .app_section_container {
@@ -727,7 +727,7 @@ header {
       border-radius: 24px;
       color: white;
       width: 95vw;
-      height: 450px;
+      height: 460px;
       position: relative;
       overflow: hidden; }
       .testimonial_section_container_item::after {
@@ -971,11 +971,27 @@ header {
           font-weight: 600;
           font-size: 17px;
           line-height: 28px;
-          color: #4089ED; }
-          .article_section_container_item_text h5 span {
+          color: #4089ED;
+          cursor: pointer; }
+          .article_section_container_item_text h5:hover {
+            color: blueviolet; }
+          .article_section_container_item_text h5 i {
             font-size: 17px;
-            margin-left: 15px; }
+            margin-left: 10px; }
       @media screen and (min-width: 768px) {
+        .article_section_container_item {
+          margin-top: 30px; }
+          .article_section_container_item_image img {
+            object-fit: contain;
+            width: 340px;
+            height: 200px; }
+          .article_section_container_item_text h3 {
+            font-size: 18px; }
+          .article_section_container_item_text h4 {
+            font-size: 15px; }
+          .article_section_container_item_text h5 {
+            font-size: 16px; } }
+      @media screen and (min-width: 1024px) {
         .article_section_container_item {
           margin-top: 30px; }
           .article_section_container_item_image img {
@@ -1022,7 +1038,7 @@ header {
         width: 78vw; } }
 
 .contact_section {
-  width: 98vw;
+  width: 95vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1043,7 +1059,7 @@ header {
     .contact_section_heading h3 {
       margin-top: 20px;
       font-weight: 300;
-      font-size: 16px;
+      font-size: 14px;
       line-height: 23px;
       color: #181818bb; }
     @media screen and (min-width: 768px) {
@@ -1140,7 +1156,8 @@ header {
     color: white;
     bottom: 10px;
     height: 80px;
-    overflow: hidden; }
+    overflow: hidden;
+    opacity: 0.4; }
     .footer_section::after img {
       object-fit: contain;
       height: 100px;
@@ -1169,7 +1186,7 @@ header {
       align-items: center;
       flex-flow: row wrap;
       justify-content: space-between;
-      width: 95%;
+      width: 98%;
       padding: 10px; }
       @media screen and (min-width: 768px) {
         .footer_section_content .flex_container {
@@ -1181,39 +1198,51 @@ header {
         background-color: white;
         color: #5B9BF3; }
       .footer_section_content_item h1 {
-        color: white; }
+        color: white;
+        font-size: 18px; }
       .footer_section_content_item h3 {
         margin-top: 20px;
         width: 391px;
         font-weight: 300;
-        font-size: 18px;
+        font-size: 16px;
         line-height: 28px;
         color: #FFFFFF; }
       .footer_section_content_item h4 {
         margin-top: 40px;
         font-weight: 300;
-        font-size: 16px;
+        font-size: 14px;
         line-height: 28px;
         color: #FFFFFF; }
       .footer_section_content_item ul {
         font-weight: 300;
-        font-size: 18px;
+        font-size: 16px;
         line-height: 38px; }
         .footer_section_content_item ul li {
           list-style: none;
           margin-top: 10px;
-          color: white;
-          cursor: pointer;
-          opacity: 0.8; }
+          cursor: pointer; }
           .footer_section_content_item ul li a {
-            text-decoration: none; }
-          .footer_section_content_item ul li:hover {
-            opacity: 1; }
+            text-decoration: none;
+            color: white;
+            opacity: 0.8; }
+            .footer_section_content_item ul li a:hover {
+              opacity: 1; }
       .footer_section_content_item_title h2 {
         color: white;
         font-weight: 700;
         font-size: 20px;
         line-height: 60px; }
+      @media screen and (min-width: 768px) {
+        .footer_section_content_item h1 {
+          font-size: 20px; }
+        .footer_section_content_item h3 {
+          font-size: 18px; }
+        .footer_section_content_item h4 {
+          font-size: 16px; }
+        .footer_section_content_item ul {
+          font-size: 18px; }
+        .footer_section_content_item_title h2 {
+          font-size: 18px; } }
     @media screen and (min-width: 768px) {
       .footer_section_content {
         display: flex;

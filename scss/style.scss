@@ -73,7 +73,7 @@ header {
                         @include transition-ease;
                         background-color: red;
                         width: 28px;
-                        transform: rotate(45deg) translate(-7px, -7px);
+                        transform: rotate(45deg) translate(-8px, -7px);
                     }
 
                     &::after {
@@ -912,8 +912,8 @@ header {
 
                 img {
                     object-fit: contain;
-                    width: 508px;
-                    height: 564px;
+                    width: 370px;
+                    height: 524px;
                 }
             }
 
@@ -924,8 +924,8 @@ header {
                 text-align: start;
 
                 h1 {
-                    width: 15rem;
-                    font-size: 25px;
+                    width: 12rem;
+                    font-size: 20px;
                     line-height: 36px;
                 }
 
@@ -936,7 +936,7 @@ header {
                 h2 {
                     font-size: 16px;
                     line-height: 27px;
-                    width: 22rem;
+                    width: 19rem;
                     color: #7D7987;
                 }
             }
@@ -1010,7 +1010,7 @@ header {
             border-radius: 24px;
             color: white;
             width: 95vw;
-            height: 450px;
+            height: 460px;
             position: relative;
             overflow: hidden;
 
@@ -1383,16 +1383,48 @@ header {
                     font-size: 17px;
                     line-height: 28px;
                     color: #4089ED;
+                    cursor: pointer;
 
-                    span {
+                    &:hover {
+                        color: blueviolet;
+                    }
+
+                    i {
                         font-size: 17px;
-                        margin-left: 15px;
+                        margin-left: 10px;
+
                     }
                 }
             }
 
-
             @include media-md {
+                margin-top: 30px;
+
+                &_image {
+                    img {
+                        object-fit: contain;
+                        width: 340px;
+                        height: 200px;
+                    }
+                }
+
+                &_text {
+                    h3 {
+                        font-size: 18px;
+                    }
+
+                    h4 {
+                        font-size: 15px;
+                    }
+
+                    h5 {
+                        font-size: 16px;
+
+                    }
+                }
+            }
+
+            @include media-lg {
                 margin-top: 30px;
 
                 &_image {
@@ -1435,6 +1467,7 @@ header {
                 }
             }
 
+
         }
 
 
@@ -1463,7 +1496,7 @@ header {
 
 // Contact section goes here
 .contact_section {
-    width: 98vw;
+    width: 95vw;
     @include flex-container;
     flex-flow: column wrap;
     margin-top: 100px;
@@ -1486,7 +1519,7 @@ header {
         h3 {
             margin-top: 20px;
             font-weight: 300;
-            font-size: 16px;
+            font-size: 14px;
             line-height: 23px;
             color: #181818bb;
         }
@@ -1636,6 +1669,7 @@ header {
         bottom: 10px;
         height: 80px;
         overflow: hidden;
+        opacity: 0.4;
 
         img {
             object-fit: contain;
@@ -1673,7 +1707,7 @@ header {
             @include flex-container;
             flex-flow: row wrap;
             justify-content: space-between;
-            width: 95%;
+            width: 98%;
             padding: 10px;
 
 
@@ -1696,13 +1730,14 @@ header {
 
             h1 {
                 color: white;
+                font-size: 18px;
             }
 
             h3 {
                 margin-top: 20px;
                 width: 391px;
                 font-weight: 300;
-                font-size: 18px;
+                font-size: 16px;
                 line-height: 28px;
                 color: #FFFFFF;
             }
@@ -1710,7 +1745,7 @@ header {
             h4 {
                 margin-top: 40px;
                 font-weight: 300;
-                font-size: 16px;
+                font-size: 14px;
                 line-height: 28px;
                 color: #FFFFFF;
 
@@ -1720,24 +1755,26 @@ header {
 
             ul {
                 font-weight: 300;
-                font-size: 18px;
+                font-size: 16px;
                 line-height: 38px;
 
 
                 li {
                     list-style: none;
                     margin-top: 10px;
-                    color: white;
+
                     cursor: pointer;
-                    opacity: 0.8;
+
 
                     a {
                         text-decoration: none;
-                    }
+                        color: white;
+                        opacity: 0.8;
 
 
-                    &:hover {
-                        opacity: 1;
+                        &:hover {
+                            opacity: 1;
+                        }
                     }
                 }
             }
@@ -1752,6 +1789,37 @@ header {
 
 
             }
+
+            @include media-md {
+                h1 {
+                    font-size: 20px;
+                }
+
+                h3 {
+                    font-size: 18px;
+                }
+
+                h4 {
+                    font-size: 16px;
+
+
+                }
+
+
+                ul {
+                    font-size: 18px;
+                }
+
+                &_title {
+                    h2 {
+                        font-size: 18px;
+                    }
+
+
+                }
+
+            }
+
         }
 
 

@@ -292,7 +292,8 @@ header {
     border: 2px solid #458FF6; }
     .secondary_button button:hover {
       background-color: transparent;
-      border-color: #3772C2; }
+      border-color: #AE10F6;
+      color: #AE10F6; }
     .secondary_button button span {
       margin-left: 10px;
       position: absolute;
@@ -367,8 +368,18 @@ header {
       flex-flow: column wrap;
       height: 40rem;
       text-align: center; }
+      .main_section_item .absolute_button {
+        position: absolute;
+        bottom: 0; }
+        @media screen and (min-width: 768px) {
+          .main_section_item .absolute_button {
+            position: relative; } }
       .main_section_item_text {
-        padding: 0 10px 0 10px; }
+        padding: 0 10px 0 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column wrap; }
         .main_section_item_text h1 {
           font-size: 20px;
           line-height: 50px; }
@@ -381,7 +392,8 @@ header {
           .main_section_item_text {
             width: 28rem;
             margin-top: 104px;
-            text-align: start; }
+            text-align: start;
+            display: block; }
             .main_section_item_text h1 {
               font-size: 25px;
               line-height: 36px;
@@ -411,14 +423,13 @@ header {
         margin-top: 50px; }
         .main_section_item_image img {
           object-fit: contain;
-          height: 20rem;
           width: 20rem; }
         @media screen and (min-width: 768px) {
           .main_section_item_image {
             margin-top: 0; }
             .main_section_item_image img {
-              height: 25rem;
-              width: 25rem; } }
+              width: 508px;
+              height: 564px; } }
         @media screen and (min-width: 1024px) {
           .main_section_item_image {
             margin-top: 0; }
@@ -603,7 +614,11 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-flow: column wrap; }
+    flex-flow: column wrap;
+    position: relative; }
+    .app_section_container .absolute_button {
+      position: absolute;
+      bottom: -80px; }
     .app_section_container_image {
       margin-top: 50px; }
       .app_section_container_image img {
@@ -817,6 +832,9 @@ header {
       @media screen and (min-width: 1024px) {
         .testimonial_section_container_item {
           width: 80vw; } }
+  @media screen and (min-width: 768px) {
+    .testimonial_section {
+      margin-top: 200px; } }
 
 .article_section {
   display: flex;
@@ -1037,7 +1055,13 @@ header {
     position: absolute;
     left: -20px;
     color: white;
-    bottom: -20px; }
+    bottom: 10px;
+    height: 80px;
+    overflow: hidden; }
+    .footer_section::after img {
+      object-fit: contain;
+      height: 100px;
+      width: 100px; }
   .footer_section::before {
     content: url("../assets/element.png");
     position: absolute;
@@ -1046,7 +1070,19 @@ header {
     right: 80px; }
   .footer_section_content {
     height: 50%;
-    width: 80%; }
+    width: 85%; }
+    .footer_section_content .flex_container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-flow: row wrap;
+      justify-content: space-between;
+      width: 80%;
+      padding: 10px; }
+      @media screen and (min-width: 768px) {
+        .footer_section_content .flex_container {
+          width: 58%;
+          padding: 5px; } }
     .footer_section_content_item {
       margin-top: 20px; }
       .footer_section_content_item .logo_content_circle {

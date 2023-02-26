@@ -34,10 +34,10 @@
 
                 <div class="nav_menu_list">
                     <li class="nav_menu_item">
-                        <a href="" class="nav_menu_item_link">Home</a>
+                        <a href="#home" class="nav_menu_item_link">Home</a>
                     </li>
                     <li class="nav_menu_item">
-                        <a href="" class="nav_menu_item_link">Find a doctor</a>
+                        <a href="#articles" class="nav_menu_item_link">Find a doctor</a>
                     </li>
                     <li class="nav_menu_item">
                         <a href="#apps" class="nav_menu_item_link">Apps</a>
@@ -46,7 +46,7 @@
                         <a href="#testimonials" class="nav_menu_item_link">Testimonials</a>
                     </li>
                     <li class="nav_menu_item">
-                        <a href="" class="nav_menu_item_link">About us</a>
+                        <a href="#service" class="nav_menu_item_link">About us</a>
                     </li>
                 </div>
             </ul>
@@ -66,17 +66,17 @@
         <div class="element">
             <img src="./assets/element.png" alt="">
         </div>
-        <div class="main_section">
+        <div class="main_section" id="home">
 
 
-            <div class="main_section_item">
+            <div class="main_section_item" >
                 <div class="main_section_item_text">
                     <h1>Virtual healthcare for you</h1>
                     <h2>Trafalgar provides progressive, and affordable
                         healthcare, accessible on mobile and online
                         for everyone</h2>
 
-                    <div class="primary_button">
+                    <div class="primary_button absolute_button">
                         <button>Consult today</button>
                     </div>
                 </div>
@@ -88,7 +88,7 @@
 
 
             <!-- Service section goes here -->
-            <div class="service_section">
+            <div class="service_section" id="service">
                 <div class="service_section_item">
                     <div class="service_section_item_heading">
                         <h1>Our services</h1>
@@ -229,8 +229,8 @@
                             web portal allow you to access information instantaneously (no tedeous form, long calls,
                             or administrative hassle) and securely</h2>
 
-                        <div class="secondary_button">
-                            <button>Download <span> &darr;</span></button>
+                        <div class="secondary_button absolute_button">
+                            <button>Download </button>
                         </div>
                     </div>
                     <div class="app_section_container_image">
@@ -278,7 +278,7 @@
 
             <!-- Article Section goes here -->
 
-            <div class="article_section">
+            <div class="article_section" id="articles">
                 <div class="article_section_heading">
                     <h1>Check out our latest article</h1>
                     <hr>
@@ -390,36 +390,40 @@
                             <h4>©Trafalgar PTY LTD 2020. All rights reserved</h4>
                         </div>
                     </div>
-                    <div class="footer_section_content_item">
-                        <div class="footer_section_content_item_title">
-                            <h2>Company</h2>
+                    <div class="flex_container">
+
+
+                        <div class="footer_section_content_item">
+                            <div class="footer_section_content_item_title">
+                                <h2>Company</h2>
+                            </div>
+                            <ul>
+                                <li><a>About</a></li>
+                                <li><a>Testimonials</a></li>
+                                <li><a>Find a doctor</a></li>
+                                <li><a>Apps</a></li>
+                            </ul>
+
+
+
+
                         </div>
-                        <ul>
-                            <li><a>About</a></li>
-                            <li><a>Testimonials</a></li>
-                            <li><a>Find a doctor</a></li>
-                            <li><a>Apps</a></li>
-                        </ul>
+                        <div class="footer_section_content_item">
+                            <div class="footer_section_content_item_title">
+                                <h2>Region</h2>
+                            </div>
+                            <ul>
+                                <li><a>Indonesia</a></li>
+                                <li><a>Singapore</a></li>
+                                <li><a>Hongkong</a></li>
+                                <li><a>Canada</a></li>
+                            </ul>
 
 
 
 
-                    </div>
-                    <div class="footer_section_content_item">
-                        <div class="footer_section_content_item_title">
-                            <h2>Region</h2>
                         </div>
-                        <ul>
-                            <li><a>Indonesia</a></li>
-                            <li><a>Singapore</a></li>
-                            <li><a>Hongkong</a></li>
-                            <li><a>Canada</a></li>
-                        </ul>
-
-
-
-
-                    </div>
+           
                     <div class="footer_section_content_item">
                         <div class="footer_section_content_item_title">
                             <h2>Help</h2>
@@ -430,11 +434,8 @@
                             <li><a>Instructions</a></li>
                             <li><a>How it works</a></li>
                         </ul>
-
-
-
-
                     </div>
+                </div>
                 </div>
             </div>
         </div>

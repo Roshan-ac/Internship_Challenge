@@ -261,7 +261,9 @@ header {
 
         &:hover {
             background-color: transparent;
-            border-color: #3772C2;
+            border-color: #AE10F6;
+            color: #AE10F6;
+
         }
 
         span {
@@ -272,6 +274,8 @@ header {
         }
     }
 }
+
+
 
 .logo_content {
     @include flex-container;
@@ -358,11 +362,23 @@ header {
             height: 40rem;
             text-align: center;
 
+            .absolute_button{
+                position: absolute;
+                bottom: 0;
+            
+            
+            @include media-md{
+                position: relative;
+            }
+            }
+
 
 
 
             &_text {
                 padding: 0 10px 0 10px;
+                @include flex-container;
+                flex-flow: column wrap;
 
                 h1 {
                     font-size: 20px;
@@ -381,6 +397,7 @@ header {
                     width: 28rem;
                     margin-top: 104px;
                     text-align: start;
+                    display: block;
 
                     h1 {
                         font-size: 25px;
@@ -427,7 +444,6 @@ header {
 
                 img {
                     object-fit: contain;
-                    height: 20rem;
                     width: 20rem;
                 }
 
@@ -435,8 +451,8 @@ header {
                     margin-top: 0;
 
                     img {
-                        height: 25rem;
-                        width: 25rem;
+                        width: 508px;
+                        height: 564px;
                     }
 
                 }
@@ -778,6 +794,13 @@ header {
         margin-top: 60px;
         @include flex-container;
         flex-flow: column wrap;
+        position: relative;
+        
+        .absolute_button{
+            position: absolute;
+            bottom: -80px;
+
+        }
 
         &_image {
             margin-top: 50px;
@@ -1129,6 +1152,12 @@ header {
 
 
     }
+
+
+@include media-md{
+    margin-top: 200px;
+}
+
 }
 
 
@@ -1447,7 +1476,15 @@ header {
         position: absolute;
         left: -20px;
         color: white;
-        bottom: -20px;
+        bottom: 10px;
+        height: 80px;
+        overflow: hidden;
+
+        img{
+            object-fit: contain;
+            height: 100px;
+            width: 100px;
+        }
     }
 
     &::before {
@@ -1460,7 +1497,24 @@ header {
 
     &_content {
         height: 50%;
-        width: 80%;
+        width: 85%;
+
+
+        .flex_container{
+            @include flex-container;
+            flex-flow: row wrap;
+            justify-content: space-between;
+            width: 80%;
+            padding: 10px;
+          
+
+
+            @include media-md{
+                width: 58%;
+                padding: 5px;
+            }
+        
+        }
 
         &_item {
             margin-top: 20px;
@@ -1525,7 +1579,7 @@ header {
         }
 
 
-        @include media-md{
+        @include media-md {
             @include flex-container;
             flex-flow: row wrap;
             align-items: stretch;

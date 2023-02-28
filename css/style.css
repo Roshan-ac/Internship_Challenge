@@ -33,7 +33,7 @@ header {
       box-shadow: #000; }
       header .menu_button_burgar_content {
         display: inline-block;
-        height: 1.5px;
+        height: 2px;
         width: 30px;
         background: black;
         position: absolute;
@@ -41,14 +41,14 @@ header {
         top: 19px; }
         header .menu_button_burgar_content::after {
           content: '';
-          height: 1.5px;
+          height: 2px;
           width: 30px;
           background: black;
           position: absolute;
           top: -8px; }
         header .menu_button_burgar_content::before {
           content: '';
-          height: 1.5px;
+          height: 2px;
           width: 26px;
           top: 8px;
           background: black;
@@ -1206,7 +1206,7 @@ header {
         color: #5B9BF3; }
       .footer_section_content_item h1 {
         color: white;
-        font-size: 18px; }
+        font-size: 20px; }
       .footer_section_content_item h3 {
         margin-top: 20px;
         width: 391px;

@@ -35,7 +35,7 @@ header {
 
             &_content {
                 display: inline-block;
-                height: 1.5px;
+                height: 2px;
                 width: 30px;
                 background: rgb(0, 0, 0);
                 position: absolute;
@@ -45,7 +45,7 @@ header {
 
                 &::after {
                     content: '';
-                    height: 1.5px;
+                    height: 2px;
                     width: 30px;
                     background: rgb(0, 0, 0);
                     position: absolute;
@@ -54,7 +54,7 @@ header {
 
                 &::before {
                     content: '';
-                    height: 1.5px;
+                    height: 2px;
                     width: 26px;
                     top: 8px;
                     background: rgb(0, 0, 0);
@@ -1658,6 +1658,7 @@ header {
 
 // Footer section goes here
 .footer_section {
+
     position: relative;
     margin-top: 100px;
     width: 100vw;
@@ -1736,7 +1737,7 @@ header {
 
             h1 {
                 color: white;
-                font-size: 18px;
+                font-size: 20px;
             }
 
             h3 {

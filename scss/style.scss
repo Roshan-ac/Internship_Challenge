@@ -31,34 +31,33 @@ header {
             right: 10px;
             height: 40px;
             width: 60px;
-            border-radius: 16px 0 0 0;
-            background: #101111b7;
+            box-shadow: #000;
 
             &_content {
                 display: inline-block;
-                height: 3px;
+                height: 1.5px;
                 width: 30px;
-                background: rgb(255, 255, 255);
+                background: rgb(0, 0, 0);
                 position: absolute;
-                right: 12px;
+                right: 14px;
                 top: 19px;
 
 
                 &::after {
                     content: '';
-                    height: 3px;
+                    height: 1.5px;
                     width: 30px;
-                    background: rgb(254, 252, 252);
+                    background: rgb(0, 0, 0);
                     position: absolute;
                     top: -8px;
                 }
 
                 &::before {
                     content: '';
-                    height: 3px;
+                    height: 1.5px;
                     width: 26px;
                     top: 8px;
-                    background: rgb(255, 254, 254);
+                    background: rgb(0, 0, 0);
                     position: absolute;
                 }
 
@@ -1058,7 +1057,7 @@ header {
 
                     h2 {
                         font-weight: 700;
-                        font-size: 26px;
+                        font-size: 24px;
                         line-height: 38px;
                     }
 
@@ -1074,7 +1073,7 @@ header {
 
                     h2 {
                         font-weight: 700;
-                        font-size: 36px;
+                        font-size: 28px;
                         line-height: 48px;
                     }
 
@@ -1093,6 +1092,9 @@ header {
                 top: 12%;
                 @include transition-ease;
 
+                @include media-md {
+                    top: 20%;
+                }
                 @include media-md {
                     top: 28%;
                 }
@@ -1118,8 +1120,8 @@ header {
                         img {
                             border-radius: 10rem;
                             object-fit: contain;
-                            width: 133px;
-                            height: 130px;
+                            width: 103px;
+                            height: 100px;
 
                         }
                     }
@@ -1234,7 +1236,7 @@ header {
             }
 
             @include media-lg {
-                width: 80vw;
+                width: 85vw;
                 height: 400px;
             }
 
@@ -1522,6 +1524,7 @@ header {
             font-size: 14px;
             line-height: 23px;
             color: #181818bb;
+            opacity: 0.7;
         }
 
 
@@ -1572,7 +1575,6 @@ header {
 
                 input {
                     margin-top: 5px;
-
                     width: 309px;
                     padding: 10px 8px 10px 8px;
                     border-radius: 5px;
@@ -1580,6 +1582,7 @@ header {
                     font-size: 15px;
                     letter-spacing: 1.5px;
                     border: 1px solid black;
+                    opacity: 0.8;
                 }
 
                 textarea {
@@ -1587,12 +1590,15 @@ header {
                     outline: none;
                     border: 1px solid black;
                     border-radius: 5px;
-                    padding: 10px 10px 10px 10px;
+                    padding: 10px 10px 10px 8px;
                     font-size: 15px;
+                    font-family: $primaryFont;
                     letter-spacing: 1.5px;
                     width: 309px;
                     height: 202px;
                     resize: none;
+                    color: #000;
+                    opacity: 0.7;
 
                 }
             }
@@ -1770,6 +1776,7 @@ header {
                         text-decoration: none;
                         color: white;
                         opacity: 0.8;
+                        font-size: 16px;
 
 
                         &:hover {

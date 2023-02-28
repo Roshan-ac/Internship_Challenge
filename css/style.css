@@ -30,29 +30,28 @@ header {
       right: 10px;
       height: 40px;
       width: 60px;
-      border-radius: 16px 0 0 0;
-      background: #101111b7; }
+      box-shadow: #000; }
       header .menu_button_burgar_content {
         display: inline-block;
-        height: 3px;
+        height: 1.5px;
         width: 30px;
-        background: white;
+        background: black;
         position: absolute;
-        right: 12px;
+        right: 14px;
         top: 19px; }
         header .menu_button_burgar_content::after {
           content: '';
-          height: 3px;
+          height: 1.5px;
           width: 30px;
-          background: #fefcfc;
+          background: black;
           position: absolute;
           top: -8px; }
         header .menu_button_burgar_content::before {
           content: '';
-          height: 3px;
+          height: 1.5px;
           width: 26px;
           top: 8px;
-          background: #fffefe;
+          background: black;
           position: absolute; }
         header .menu_button_burgar_content.open {
           transition: all 0.4s ease-in-out;
@@ -762,7 +761,7 @@ header {
             padding-top: 60px; }
             .testimonial_section_container_item_title h2 {
               font-weight: 700;
-              font-size: 26px;
+              font-size: 24px;
               line-height: 38px; }
             .testimonial_section_container_item_title hr {
               width: 50px;
@@ -773,7 +772,7 @@ header {
             padding-top: 60px; }
             .testimonial_section_container_item_title h2 {
               font-weight: 700;
-              font-size: 36px;
+              font-size: 28px;
               line-height: 48px; }
             .testimonial_section_container_item_title hr {
               width: 50px;
@@ -785,6 +784,9 @@ header {
         height: 100%;
         top: 12%;
         transition: all 0.4s ease-in-out; }
+        @media screen and (min-width: 768px) {
+          .testimonial_section_container_item_slide {
+            top: 20%; } }
         @media screen and (min-width: 768px) {
           .testimonial_section_container_item_slide {
             top: 28%; } }
@@ -808,8 +810,8 @@ header {
             .testimonial_section_container_item .avatar_content_image img {
               border-radius: 10rem;
               object-fit: contain;
-              width: 133px;
-              height: 130px; }
+              width: 103px;
+              height: 100px; }
           .testimonial_section_container_item .avatar_content_name {
             margin-top: 15px; }
             .testimonial_section_container_item .avatar_content_name h2 {
@@ -874,7 +876,7 @@ header {
           height: 500px; } }
       @media screen and (min-width: 1024px) {
         .testimonial_section_container_item {
-          width: 80vw;
+          width: 85vw;
           height: 400px; } }
   @media screen and (min-width: 768px) {
     .testimonial_section {
@@ -1061,7 +1063,8 @@ header {
       font-weight: 300;
       font-size: 14px;
       line-height: 23px;
-      color: #181818bb; }
+      color: #181818bb;
+      opacity: 0.7; }
     @media screen and (min-width: 768px) {
       .contact_section_heading h2 {
         font-weight: 700;
@@ -1107,19 +1110,23 @@ header {
           outline: none;
           font-size: 15px;
           letter-spacing: 1.5px;
-          border: 1px solid black; }
+          border: 1px solid black;
+          opacity: 0.8; }
         .contact_section_item form .input_field textarea,
         .contact_section_item form .flex_container_input_field textarea {
           margin-top: 5px;
           outline: none;
           border: 1px solid black;
           border-radius: 5px;
-          padding: 10px 10px 10px 10px;
+          padding: 10px 10px 10px 8px;
           font-size: 15px;
+          font-family: "Mulish";
           letter-spacing: 1.5px;
           width: 309px;
           height: 202px;
-          resize: none; }
+          resize: none;
+          color: #000;
+          opacity: 0.7; }
       .contact_section_item form .flex_container {
         display: flex;
         justify-content: center;
@@ -1224,7 +1231,8 @@ header {
           .footer_section_content_item ul li a {
             text-decoration: none;
             color: white;
-            opacity: 0.8; }
+            opacity: 0.8;
+            font-size: 16px; }
             .footer_section_content_item ul li a:hover {
               opacity: 1; }
       .footer_section_content_item_title h2 {

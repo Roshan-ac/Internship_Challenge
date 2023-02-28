@@ -1,105 +1,93 @@
 
-const menu_button = document.querySelector('.menu_button_burgar').addEventListener('click', toogleButton)
-const hamburger = document.querySelector('.menu_button_burgar_content')
-const nav = document.querySelector('.nav')
-const navmenu = document.querySelector('.nav_menu');
-const navItem = document.querySelectorAll('.nav_menu_item');
+// Main function 
+$(document).ready(function () {
 
-let showbutton = true;
-
-function toogleButton() {
-
-    if (!showbutton) {
-        hamburger.classList.add('open');
-        nav.classList.add('open')
-        navmenu.classList.add('open')
-        navItem.forEach(list => list.classList.add('open'))
-        showbutton = true;
-    } else {
-        hamburger.classList.remove('open');
-        nav.classList.remove('open');
-        navmenu.classList.remove('open');
-        navItem.forEach(list => list.classList.remove('open'))
-        showbutton = false;
-    }
-}
+    // global variables
+    let showbutton = true;
+    let counter = 0;
 
 
+    // Script for hamburgar open and close
+    $('.menu_button_burgar').on('click', function () {
+        if (!showbutton) {
+            $('.menu_button_burgar_content').addClass('open');
+            $('.nav').addClass('open')
+            $('.nav_menu').addClass('open')
 
+            $('.nav_menu_item').each(function () {
+                $(this).addClass('open')
+            })
+            showbutton = true;
 
-
-var swiper = new Swiper(".service_section_item_container_slide", {
-    slidesPerView: 3,
-    spaceBetween: 20,
-    loop: true,
-    centerSlide: 'true',
-    fade: 'true',
-    grabCursor: 'true',
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-        dynamicBullets: true,
-    },
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
-
-    breakpoints: {
-        0: {
-            slidesPerView: 1,
-        },
-        520: {
-            slidesPerView: 2,
-        },
-        950: {
-            slidesPerView: 3,
-        },
-        1240: {
-            slidesPerView: 3
+        } else {
+            $('.menu_button_burgar_content').removeClass('open');
+            $('.nav').removeClass('open')
+            $('.nav_menu').removeClass('open')
+            showbutton = false;
         }
-    },
+    })
+
+
+
+
+
+    // Script for hiding hamburgar on scrooling
+    $('.main').scroll(function () {
+        if ($(this).scrollTop() > 250) {
+            $('.menu_button_burgar_content').hide(100);
+        }
+        else {
+            $('.menu_button_burgar_content').show(100);
+        }
+    });
+
+
+
+
+
+
+    // Testimonials section slide animation script
+
+    $('.testimonial_section_container_item_slide').each(function (index) {
+        $(this).css('left', `${index * 100}%`)
+    })
+
+    $('#goNext').on('click', function () {
+        if (counter < $('.testimonial_section_container_item_slide').length - 1) {
+            $('.crousel_nav_dots_item').removeClass('active')
+            counter++;
+            $('.crousel_nav_dots_item').each(function (index) {
+                if (index == counter) {
+                    $(this).addClass('active')
+                }
+            })
+
+            SlidePage();
+        }
+
+    })
+
+    $('#goPrev').on('click', function () {
+        if (counter != 0) {
+            $('.crousel_nav_dots_item').removeClass('active')
+            counter--;
+            $('.crousel_nav_dots_item').each(function (index) {
+                if (index == counter) {
+                    $(this).addClass('active')
+                }
+            })
+            SlidePage();
+        }
+    })
+
+
+
+
+    const SlidePage = () => {
+        $('.testimonial_section_container_item_slide').each(function () {
+            $(this).css('transform', `translateX(-${counter * 100}%)`)
+        })
+    }
 });
-
-let counter = 0;
-
-const dot_Item = document.querySelectorAll('.crousel_nav_dots_item');
-const slide = document.querySelectorAll('.testimonial_section_container_item_slide')
-slide.forEach(
-    (item, index) => {
-        item.style.left = `${index * 100}%`
-
-    }
-)
-
-const SlidePage = () => {
-    slide.forEach(
-        (item) => {
-            item.style.transform = `translateX(-${counter * 100}%)`
-        }
-    )
-}
-
-
-
-
-
-const goNext = () => {
-    if (counter < slide.length - 1) {
-        counter++;
-        dot_Item[counter - 1].classList.remove('active')
-        dot_Item[counter].classList.add('active')
-        SlidePage();
-    }
-};
-const goPrev = () => {
-    if (counter != 0) {
-        counter--;
-       dot_Item[counter + 1].classList.remove('active')
-       dot_Item[counter].classList.add('active')
-        SlidePage();
-    }
-};
-
 
 

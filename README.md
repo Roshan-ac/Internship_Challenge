@@ -22,7 +22,7 @@ In this project, I have utilized SCSS as a preprocessor to optimize the CSS code
 
 ## Deployed Page Link
 
-https://github.com/Roshan-ac/Internship_Challenge/deployments/activity_log?environment=github-pages
+https://roshan-ac.github.io/Internship_Challenge/
 
 
 
